@@ -1,0 +1,34 @@
+{% extends 'app_pangres/base.html' %}
+
+{% block link %}{% endblock link %}
+
+{% block title %}
+Django | Upload Data
+{% endblock title %}
+
+{% block style %}
+
+    input { margin: 0 2rem; }
+    .card { margin-top: 2rem; }
+    .div-button {
+        margin: 1rem;
+    }
+    button a { color: #fff; }
+
+{% endblock style %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <button class="btn btn-success" id="btn-upload" name="btn-upload" type="submit">Laden</button>
+                <input type="file" id="input-file" name="input-file">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block script %}{% endblock script %}
